@@ -1,3 +1,8 @@
+spring:
+  profiles:
+    active: dev
+    
+---
 server:
   port: 8001
 
@@ -15,6 +20,7 @@ spring:
       initial-size: 5                                       # \u521D\u59CB\u5316\u8FDE\u63A5\u6570
       max-total: 5                                          # \u6700\u5927\u8FDE\u63A5\u6570
       max-wait-millis: 200                                  # \u7B49\u5F85\u8FDE\u63A5\u83B7\u53D6\u7684\u6700\u5927\u8D85\u65F6\u65F6\u95F4
+  profiles: dev
 
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis\u914D\u7F6E\u6587\u4EF6\u6240\u5728\u8DEF\u5F84
@@ -27,4 +33,4 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
   instance:
     instance-id: microservicecloud-dept8001
-    prefer-ip-address: true 
+    prefer-ip-address: true     #\u8BBF\u95EE\u8DEF\u5F84\u53EF\u4EE5\u663E\u793AIP\u5730\u5740
